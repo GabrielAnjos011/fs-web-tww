@@ -2,6 +2,7 @@ import { HeartIcon } from "@heroicons/react/outline";
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import avatar from './avatar3.png'
 
 const MAX_TWEET_CHAR = 140;
 
@@ -35,7 +36,7 @@ export function TweetForm({ loggedInUser, onSuccess }) {
   return (
     <div className="border-b border-silver p-4 space-y-6">
       <div className="flex p-4 space-x-5">
-        <img src="/src/avatar3.png" alt="#" className="w-7" />
+        <img src={avatar} alt="#" className="w-7" />
         <h1 className="font-bold text-xl">Pagina Inicial</h1>
       </div>
 

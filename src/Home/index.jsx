@@ -9,7 +9,7 @@ export function TweetForm({ loggedInUser, onSuccess }) {
   const formik = useFormik({
     onSubmit: async (values, form) => {
       await axios.post(
-        "http://localhost:9901/tweets",
+        `${import.meta.env.VITE_API_HOST}/tweets`,
         {
           text: values.text,
         },
@@ -98,7 +98,7 @@ export function Home({ loggedInUser }) {
   console.log(loggedInUser);
   const [data, setData] = useState([]);
   async function getData() {
-    const res = await axios.get("http://localhost:9901/tweets", {
+    const res = await axios.get(`${import.meta.env.VITE_API_HOST}/tweets`, {
       headers: {
         authorization: `Bearer ${loggedInUser.acessToken}`,
       },

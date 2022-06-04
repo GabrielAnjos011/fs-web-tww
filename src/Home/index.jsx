@@ -120,7 +120,7 @@ export function Home({ loggedInUser }) {
               key={tweet.id}
               name={tweet.user.name}
               username={tweet.user.username}
-              avatar="/src/avatar3.png"
+              avatar={avatar}
             >
               {tweet.text}
             </Tweet>
